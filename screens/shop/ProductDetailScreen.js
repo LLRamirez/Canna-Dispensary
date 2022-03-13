@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image, Button, ScrollView } from 'react-native';
+import { StyleSheet, View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import * as cartActions from '../../store/actions/cart';
 
@@ -12,12 +12,14 @@ const ProductDetailScreen = props => {
 
     return(<ScrollView>
     <Image style={styles.image} source={{ uri: selectedProduct.imageUrl}}/>
-    <View style={styles.action}>
-    <Button title="Add to cart" onPress={() => {
-        dispatch(cartActions.addToCart(selectedProduct))
-    }}/> 
-    </View>
-        <Text style={styles.price}>{selectedProduct.price.toFixed(2)}</Text>
+        <View style={styles.action}>
+            <TouchableOpacity style={styles.addCartBtn} title="Add to cart" onPress={() => {
+                dispatch(cartActions.addToCart(selectedProduct))
+            }}>
+                <Text style={styles.addText}>Add to cart</Text>
+            </TouchableOpacity> 
+        </View>
+        <Text style={styles.price}>${selectedProduct.price.toFixed(2)}</Text>
         <Text style={styles.description}>{selectedProduct.description}</Text>
     </ScrollView>);
 }
@@ -38,18 +40,28 @@ const styles = StyleSheet.create({
         color: '#888',
         textAlign: 'center',
         marginVertical: 20,
-        fontFamily: 'open-sans-bold'
+        fontFamily: 'source-pro-semi'
     },
     description: {
-        fontSize: 14,
+        fontSize: 16,
         textAlign: 'center',
-        fontFamily: 'open-sans-bold',
+        fontFamily: 'source-pro-semi',
+        paddingHorizontal: 15,
     },
     action: {
         marginVertical: 10,
         alignItems: 'center',
         marginHorizontal: 20,
     },
+    addText: {
+        fontFamily: 'source-pro-semi',
+        color: 'white',
+    },
+    addCartBtn: {
+        backgroundColor: 'black',
+        padding: 10,
+        borderRadius: 5,
+    }
 });
 
 export default ProductDetailScreen;

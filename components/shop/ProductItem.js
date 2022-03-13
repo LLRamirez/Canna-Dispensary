@@ -4,12 +4,11 @@ import {
   Text,
   Image,
   StyleSheet,
-  Button,
   TouchableOpacity,
   Platform,
   TouchableNativeFeedback,
 } from "react-native";
-import Colors from "../../constants/Colors";
+import Card from '../../components/UI/Card';
 
 const ProductItem = props => {
   let TouchableCmp = TouchableOpacity;
@@ -19,9 +18,9 @@ const ProductItem = props => {
   }
 
   return (
-    <View style={styles.product}>
+    <Card style={styles.product}>
       <View style={styles.touchable}>
-        <TouchableCmp onPress={props.onViewDetail} useForeground>
+        <TouchableCmp onPress={props.onSelect} useForeground>
           <View>
             <View style={styles.imgContainer}>
               <Image style={styles.img} source={{ uri: props.image }} />
@@ -31,33 +30,17 @@ const ProductItem = props => {
               <Text style={styles.price}>${props.price.toFixed(2)}</Text>
             </View>
             <View style={styles.action}>
-              <Button
-                color={Colors.primary}
-                title="Add to cart"
-                onPress={props.onAddToCart}
-              />
-              <Button
-                color={Colors.primary}
-                title="View details"
-                onPress={props.onViewDetail}
-              />
+           {props.children}
             </View>
           </View>
         </TouchableCmp>
       </View>
-    </View>
+    </Card>
   );
 };
 
 const styles = StyleSheet.create({
   product: {
-    shadowColor: "black",
-    shadowOpacity: 0.26,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 8,
-    elevation: 5,
-    borderRadius: 10,
-    backgroundColor: "white",
     height: 300,
     margin: 20,
   },
@@ -78,23 +61,24 @@ const styles = StyleSheet.create({
   },
   detail: {
     alignItems: "center",
-    height: "15%",
+    height: "17%",
     padding: 10,
   },
   title: {
     fontSize: 18,
-    fontFamily: 'open-sans-bold',
+    fontFamily: 'source-pro-bold',
     marginVertical: 2,
   },
   price: {
     fontSize: 14,
+    fontFamily: 'source-pro-semi',
     color: "#888",
   },
   action: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    height: "25%",
+    height: "23%",
     paddingHorizontal: 20,
   },
 });
