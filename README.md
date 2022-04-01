@@ -1,1 +1,3 @@
-# CandleShop
+# Canna Dispensary E-Commerce Store
+
+
