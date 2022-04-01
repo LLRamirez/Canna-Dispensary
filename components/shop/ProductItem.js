@@ -9,6 +9,7 @@ import {
   TouchableNativeFeedback,
 } from "react-native";
 import Card from '../../components/UI/Card';
+import Colors from '../../constants/Colors';
 
 const ProductItem = props => {
   let TouchableCmp = TouchableOpacity;
@@ -30,7 +31,7 @@ const ProductItem = props => {
               <Text style={styles.price}>${props.price.toFixed(2)}</Text>
             </View>
             <View style={styles.action}>
-           {props.children}
+           {props.children} 
             </View>
           </View>
         </TouchableCmp>
@@ -68,6 +69,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: 'source-pro-bold',
     marginVertical: 2,
+    color: Colors.titles,
   },
   price: {
     fontSize: 14,

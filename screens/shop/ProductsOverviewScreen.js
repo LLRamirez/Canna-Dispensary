@@ -45,7 +45,7 @@ const ProductsOverviewScreen = props => {
                 selectItemHandler(itemData.item.id, itemData.item.title)
             }}
               >
-                  <Text style={styles.btnText}>View details test</Text>
+                  <Text style={styles.btnText}>View details</Text>
               </TouchableOpacity>
 
         </ProductItem>

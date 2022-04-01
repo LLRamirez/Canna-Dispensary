@@ -5,7 +5,7 @@ const PRODUCTS = [
     'p1',
     'u1',
     'Red Shirt',
-    'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
+    'https://images.pexels.com/photos/7773108/pexels-photo-7773108.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
     'A red t-shirt, perfect for days with non-red weather.',
     29.99
   ),
@@ -13,7 +13,7 @@ const PRODUCTS = [
     'p2',
     'u1',
     'Blue Carpet',
-    'https://images.pexels.com/photos/6292/blue-pattern-texture-macro.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    'https://images.pexels.com/photos/7773110/pexels-photo-7773110.jpeg?auto',
     'Fits your red shirt perfectly. To stand on. Not to wear it.',
     99.99
   ),
@@ -21,7 +21,7 @@ const PRODUCTS = [
     'p3',
     'u2',
     'Coffee Mug',
-    'https://images.pexels.com/photos/160834/coffee-cup-and-saucer-black-coffee-loose-coffee-beans-160834.jpeg?cs=srgb&dl=bean-beans-black-coffee-160834.jpg&fm=jpg',
+    'https://images.pexels.com/photos/7667900/pexels-photo-7667900.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
     'Can also be used for tea!',
     8.99
   ),
@@ -29,7 +29,7 @@ const PRODUCTS = [
     'p4',
     'u3',
     'The Book - Limited Edition',
-    'https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?cs=srgb&dl=blur-blurred-book-pages-46274.jpg&fm=jpg',
+    'https://images.pexels.com/photos/7667906/pexels-photo-7667906.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
     "What the content is? Why would that matter? It's a limited edition!",
     15.99
   ),
@@ -37,7 +37,7 @@ const PRODUCTS = [
     'p5',
     'u3',
     'PowerBook',
-    'https://get.pxhere.com/photo/laptop-computer-macbook-mac-screen-water-board-keyboard-technology-air-mouse-photo-airport-aircraft-tablet-aviation-office-black-monitor-keys-graphic-hardware-image-pc-exhibition-multimedia-calculator-vector-water-cooling-floppy-disk-phased-out-desktop-computer-netbook-personal-computer-computer-monitor-electronic-device-computer-hardware-display-device-448748.jpg',
+    'https://images.pexels.com/photos/9259985/pexels-photo-9259985.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
     'Awesome hardware, crappy keyboard and a hefty price. Buy now before a new one is released!',
     2299.99
   ),
@@ -45,7 +45,23 @@ const PRODUCTS = [
     'p6',
     'u1',
     'Pen & Paper',
-    'https://cdn.pixabay.com/photo/2015/10/03/02/14/pen-969298_1280.jpg',
+    'https://images.pexels.com/photos/7773104/pexels-photo-7773104.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+    "Can be used for role-playing (not the kind of role-playing you're thinking about...).",
+    5.49
+  ),
+  new Product(
+    'p7',
+    'u1',
+    'Fruity Pebbles',
+    'https://images.pexels.com/photos/7773109/pexels-photo-7773109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+    "Can be used for role-playing (not the kind of role-playing you're thinking about...).",
+    5.49
+  ),
+  new Product(
+    'p8',
+    'u2',
+    'Ninja Fruit',
+    'https://images.pexels.com/photos/7667800/pexels-photo-7667800.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
     "Can be used for role-playing (not the kind of role-playing you're thinking about...).",
     5.49
   )

@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import * as cartActions from '../../store/actions/cart';
+import Colors from '../../constants/Colors';
+import Quantity from '../../components/UI/QuantityPicker';
 
 const ProductDetailScreen = props => { 
     const productId = props.navigation.getParam('productId');
@@ -12,15 +14,19 @@ const ProductDetailScreen = props => {
 
     return(<ScrollView>
     <Image style={styles.image} source={{ uri: selectedProduct.imageUrl}}/>
+    {/* <View style={styles.qtyContainer}>
+        <Quantity/>
+        </View> */}
+        <Text style={styles.price}>${selectedProduct.price.toFixed(2)}</Text>
+        <Text style={styles.description}>{selectedProduct.description}</Text>
         <View style={styles.action}>
+        
             <TouchableOpacity style={styles.addCartBtn} title="Add to cart" onPress={() => {
                 dispatch(cartActions.addToCart(selectedProduct))
             }}>
                 <Text style={styles.addText}>Add to cart</Text>
             </TouchableOpacity> 
         </View>
-        <Text style={styles.price}>${selectedProduct.price.toFixed(2)}</Text>
-        <Text style={styles.description}>{selectedProduct.description}</Text>
     </ScrollView>);
 }
 
@@ -44,7 +50,7 @@ const styles = StyleSheet.create({
     },
     description: {
         fontSize: 16,
-        textAlign: 'center',
+        textAlign: 'left',
         fontFamily: 'source-pro-semi',
         paddingHorizontal: 15,
     },
@@ -53,13 +59,18 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginHorizontal: 20,
     },
+    qtyContainer: {
+        alignItems: 'center',
+        paddingTop: 10,
+    },
     addText: {
         fontFamily: 'source-pro-semi',
         color: 'white',
     },
     addCartBtn: {
-        backgroundColor: 'black',
-        padding: 10,
+        backgroundColor: Colors.primary,
+        padding: 15,
+        marginTop: 15,
         borderRadius: 5,
     }
 });
