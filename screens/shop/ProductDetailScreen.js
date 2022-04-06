@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         alignItems: 'center',
         marginHorizontal: 20,
+        
     },
     qtyContainer: {
         alignItems: 'center',
@@ -66,12 +67,15 @@ const styles = StyleSheet.create({
     addText: {
         fontFamily: 'source-pro-semi',
         color: 'white',
+        textAlign: 'center',
     },
     addCartBtn: {
         backgroundColor: Colors.primary,
         padding: 15,
         marginTop: 15,
         borderRadius: 5,
+        width:'100%',
+
     }
 });
 
