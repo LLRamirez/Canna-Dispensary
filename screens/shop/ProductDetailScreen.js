@@ -18,10 +18,12 @@ const ProductDetailScreen = props => {
         <Quantity/>
         </View> */}
         <Text style={styles.price}>${selectedProduct.price.toFixed(2)}</Text>
-        <Text style={styles.description}>THC% {selectedProduct.thc}</Text>
-        <Text style={styles.description}>CBD% {selectedProduct.cbd}</Text>
+        <View style={styles.percentContainer}>
+        <Text style={styles.description}>THC: {selectedProduct.thc}</Text>
+        <Text style={styles.description}>CBD: {selectedProduct.cbd}</Text>
+        </View>
         <Text style={styles.description}>Flavor & Aroma: {selectedProduct.flavnAroma}</Text>
-        <Text style={styles.description}>{selectedProduct.description}</Text>
+        <Text style={styles.descriptionWords}>{selectedProduct.description}</Text>
         <View style={styles.action}>
         
             <TouchableOpacity style={styles.addCartBtn} title="Add to cart" onPress={() => {
@@ -83,6 +85,19 @@ const styles = StyleSheet.create({
         marginTop: 15,
         borderRadius: 5,
         width:'100%',   
+    },
+    percentContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    descriptionWords: {
+        fontSize: 16,
+        textAlign: 'left',
+        fontFamily: 'source-pro-semi',
+        paddingHorizontal: 15,
+        marginTop: 30,
+        marginBottom: 5,
     }
 });
 
