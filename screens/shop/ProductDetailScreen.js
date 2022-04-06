@@ -18,6 +18,9 @@ const ProductDetailScreen = props => {
         <Quantity/>
         </View> */}
         <Text style={styles.price}>${selectedProduct.price.toFixed(2)}</Text>
+        <Text style={styles.description}>THC% {selectedProduct.thc}</Text>
+        <Text style={styles.description}>CBD% {selectedProduct.cbd}</Text>
+        <Text style={styles.description}>Flavor & Aroma: {selectedProduct.flavnAroma}</Text>
         <Text style={styles.description}>{selectedProduct.description}</Text>
         <View style={styles.action}>
         
@@ -53,12 +56,17 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         fontFamily: 'source-pro-semi',
         paddingHorizontal: 15,
+        marginTop: 5,
+        marginBottom: 5,
     },
     action: {
         marginVertical: 10,
         alignItems: 'center',
         marginHorizontal: 20,
-        
+        display:'flex', 
+        flexDirection: 'column',
+        flexGrow: 1,
+        justifyContent: 'space-between',
     },
     qtyContainer: {
         alignItems: 'center',
@@ -74,8 +82,7 @@ const styles = StyleSheet.create({
         padding: 15,
         marginTop: 15,
         borderRadius: 5,
-        width:'100%',
-
+        width:'100%',   
     }
 });
 
