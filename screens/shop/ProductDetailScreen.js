@@ -65,10 +65,7 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         alignItems: 'center',
         marginHorizontal: 20,
-        display:'flex', 
-        flexDirection: 'column',
-        flexGrow: 1,
-        justifyContent: 'space-between',
+        height: '40%',
     },
     qtyContainer: {
         alignItems: 'center',
@@ -85,6 +82,8 @@ const styles = StyleSheet.create({
         marginTop: 15,
         borderRadius: 5,
         width:'100%',   
+        position: 'absolute',
+        bottom: 0,
     },
     percentContainer: {
         display: 'flex',
