@@ -29,21 +29,6 @@ const CartScreen = props => {
     const dispatch = useDispatch();
 
     return <View style={styles.screen}>
-        <Card style={styles.summary}>
-            <Text style={styles.summaryText}> Total:{' '} 
-                <Text style={styles.amount}>
-                 ${Math.round(cartTotalAmount.toFixed(2) * 100) / 100}       
-                </Text>
-            </Text>
-            <Button
-                title="Order Now"
-                color={Colors.accent}
-                disabled={cartItems.length === 0}
-                onPress={() => {
-                    dispatch(ordersActions.addOrder(cartItems, cartTotalAmount))
-                }}
-            />
-        </Card>
         <FlatList
             data={cartItems}
             keyExtractor={item => item.productId}
@@ -59,6 +44,21 @@ const CartScreen = props => {
             />
             }
         />
+         <Card style={styles.summary}>
+            <Text style={styles.summaryText}> Total:{' '} 
+                <Text style={styles.amount}>
+                 ${Math.round(cartTotalAmount.toFixed(2) * 100) / 100}       
+                </Text>
+            </Text>
+            <Button
+                title="Order Now"
+                color={Colors.accent}
+                disabled={cartItems.length === 0}
+                onPress={() => {
+                    dispatch(ordersActions.addOrder(cartItems, cartTotalAmount))
+                }}
+            />
+        </Card>
     </View>
 }
 
