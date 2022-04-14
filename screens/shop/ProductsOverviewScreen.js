@@ -83,12 +83,14 @@ const styles = StyleSheet.create({
     btnText: {
         fontFamily: 'source-pro-semi',
         fontSize: 16,
-        color: Colors.primary,
+        color: 'white',
     },
     btn: {
+        backgroundColor: Colors.primary,
         borderColor: Colors.primary,
         borderWidth: 3,
         padding: 8,
+        borderRadius: 3,
     }
 })
 

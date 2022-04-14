@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   touchable: {
     overflow: "hidden",
-    borderRadius: 10,
+    borderRadius: 2,
   },
   imgContainer: {
     width: "100%",
@@ -66,13 +66,13 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   title: {
-    fontSize: 18,
+    fontSize: 19,
     fontFamily: 'source-pro-bold',
     marginVertical: 2,
     color: Colors.titles,
   },
   price: {
-    fontSize: 14,
+    fontSize: 15,
     fontFamily: 'source-pro-semi',
     color: "#888",
   },
