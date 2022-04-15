@@ -53,11 +53,10 @@ const styles = StyleSheet.create({
     description: {
         fontSize: 18,
         textAlign: 'left',
-        fontFamily: 'source-pro-bold',
+        fontFamily: 'source-pro-semi',
         paddingHorizontal: 15,
         marginTop: 5,
         marginBottom: 5,
-        
     },
     action: {
         marginVertical: 10,
