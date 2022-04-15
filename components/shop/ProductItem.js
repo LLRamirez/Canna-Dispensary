@@ -42,7 +42,7 @@ const ProductItem = props => {
 
 const styles = StyleSheet.create({
   product: {
-    height: 300,
+    height: 330,
     margin: 20,
   },
   touchable: {
