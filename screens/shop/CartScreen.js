@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
     },
     summaryText: {
-        fontFamily: 'open-sans-bold',
+        fontFamily: 'source-pro-bold',
         fontSize: 18,
     },
     amount: {

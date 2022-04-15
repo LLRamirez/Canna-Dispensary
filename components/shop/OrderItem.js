@@ -50,11 +50,11 @@ const styles = StyleSheet.create({
       marginBottom: 15,
     },
     totalAmount: {
-        fontFamily: 'open-sans-bold',
+        fontFamily: 'source-pro-bold',
         fontSize: 16
     },
     date: {
-        fontFamily: 'open-sans',
+        fontFamily: 'source-pro-semi',
         fontSize: 16,
         color: '#888',
     },

@@ -41,12 +41,12 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     quantity: {
-        fontFamily: 'open-sans',
+        fontFamily: 'source-pro-semi',
         color: '#888',
         fontSize: 16
     },
     mainText: {
-        fontFamily: 'open-sans-bold',
+      fontFamily: 'source-pro-semi',
         fontSize: 16
     },
     deleteButton: {
