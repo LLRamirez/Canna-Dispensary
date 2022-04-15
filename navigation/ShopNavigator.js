@@ -84,12 +84,15 @@ const AdminNavigator = createStackNavigator(
 
 const ShopNavigator = createDrawerNavigator(
     {
-    Products: ProductNavigator,
-    Orders: OrdersNavigator,
-    Admin: AdminNavigator,
+    PRODUCTS: ProductNavigator,
+    ORDERS: OrdersNavigator,
+    ADMIN: AdminNavigator,
 }, {
     contentOptions: {
-        activeTintColor: Colors.primary
+        activeTintColor: Colors.primary,
+        itemsContainerStyle: {
+          paddingTop: 40,
+        },
     }
 })
 

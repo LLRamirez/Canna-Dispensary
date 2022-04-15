@@ -57,7 +57,7 @@ const UserProductsScreen = props => {
 
 UserProductsScreen.navigationOptions = navData => {
   return {
-    headerTitle: 'Your Productso',
+    headerTitle: 'YOUR PRODUCTS',
     headerLeft: (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
